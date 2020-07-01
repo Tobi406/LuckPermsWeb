@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default {
-  mode: 'spa',
+  mode: 'universal',
   generate: {
     fallback: true,
     exclude: [
