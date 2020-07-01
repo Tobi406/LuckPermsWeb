@@ -1,9 +1,14 @@
 import axios from 'axios';
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   generate: {
     fallback: true,
+    exclude: [
+      /^\/editor/,
+      /^\/verbose/,
+      /^\/treeview/,
+    ],
     routes: function () {
       return axios.get('https://api.github.com/repos/LuckPerms/wiki/contents')
       .then((response) => {
